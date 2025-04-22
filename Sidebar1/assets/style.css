@@ -6,7 +6,8 @@
 
 body{
     margin: 0;
-    background: #121212;
+    /* background: #121212; */
+    background: #fff;
 }
 
 button{
@@ -23,11 +24,11 @@ button{
     left: 0;
     width: 75px;
     height: 100%;
-    background: #3949ab;
+    background: #3f3f41;
     transition: all 0.4s;
 }
 
-body.open .sidebar{
+.open .sidebar{
     width: 240px;
 }
 
@@ -59,13 +60,13 @@ body.open .sidebar{
     place-items: center;
 }
 
-.sidebar-burger > i, body.open .sidebar-burger > i{
+.sidebar-burger > i, .open .sidebar-burger > i{
     font-size: 25px;
     color: #f9f9f9;
     transition: all 0.4s;
 }
 
-.sidebar-burger:hover > i, body.open .sidebar-burger:hover > i{
+.sidebar-burger:hover > i, .open .sidebar-burger:hover > i{
     color: #bdbdbd;
 }
 
@@ -75,21 +76,23 @@ body.open .sidebar{
     transition: all 0.4s;
 }
 
-body.open .sidebar-logo{
+.open .sidebar-logo{
     opacity: 1;
     transition: all 0.4s;
 }
 
 .sidebar-menu{
     display: grid;
+    color: #fff;
 }
 
 .sidebar-menu > button{
     display: flex;
     gap: 12px;
+    color: #fff;
     align-items: center;
     height: 55px;
-    font-family: "Ubuntu";
+    font-family: "Calibri", sans-serif;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 2px;
@@ -97,6 +100,12 @@ body.open .sidebar-logo{
     padding: 0 22px;
     border-left: 3px solid transparent;
     transition: all 0.4s;
+    text-align: left; /* Ensure text is left-aligned */
+    width: 100%; /* Make buttons full width */
+}
+
+.sidebar-menu > button > span {
+    color: white;
 }
 
 .sidebar-menu > button:hover{
@@ -125,7 +134,16 @@ body.open .sidebar-logo{
     transition: all 0.4s;
 }
 
-body.open .sidebar-menu > button > span{
+.open .sidebar-menu > button > span{
     opacity: 1;
     transition: all 0.4s;
+}
+
+#page-content {
+    margin-left: 75px;
+    transition: margin-left 0.4s;
+}
+
+.open #page-content {
+    margin-left: 240px;
 }
